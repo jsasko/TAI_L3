@@ -4,28 +4,44 @@ let index = 0;
 
 let preQuestions = [
     {
-        "question": "Question 1",
+        "question": "Grand Central Terminal, Park Avenue, New York is the world's",
         "correct_answer": "A",
-        "answerA": "A",
-        "answerB": "B",
-        "answerC": "C",
-        "answerD": "D",
+        "answerA": "largest railway station",
+        "answerB": "highest railway station",
+        "answerC": "longest railway station",
+        "answerD": "None of the above",
     },
     {
-        "question": "Question 2",
+        "question": "Entomology is the science that studies",
         "correct_answer": "B",
-        "answerA": "A",
-        "answerB": "B",
-        "answerC": "C",
-        "answerD": "D",
+        "answerA": "Behavior of human beings",
+        "answerB": "Insects",
+        "answerC": "The origin and history of technical and scientific terms",
+        "answerD": "The formation of rocks",
     },
     {
-        "question": "Question 3",
+        "question": "Eritrea, which became the 182nd member of the UN in 1993, is in the continent of",
         "correct_answer": "B",
-        "answerA": "A",
-        "answerB": "B",
-        "answerC": "C",
-        "answerD": "D",
+        "answerA": "Asia",
+        "answerB": "Africa",
+        "answerC": "Europe",
+        "answerD": "Australia",
+    },
+    {
+        "question": "Garampani sanctuary is located at",
+        "correct_answer": "B",
+        "answerA": "Junagarh, Gujarat",
+        "answerB": "Diphu, Assam",
+        "answerC": "Kohima, Nagaland",
+        "answerD": "Gangtok, Sikkim",
+    },
+    {
+        "question": "For which of the following disciplines is Nobel Prize awarded?",
+        "correct_answer": "D",
+        "answerA": "Physics and Chemistry",
+        "answerB": "Physiology or Medicine",
+        "answerC": "Literature, Peace and Economics",
+        "answerD": "All of the above",
     }
 ];
 
@@ -44,20 +60,25 @@ function clearClass() {
     })
 }
 
+function average()
+{
+
+}
+
 function bindData(index) {
 
     if (finishQuiz()) {
-        //localStorage.setItem('average', 'score');
+        localStorage.setItem('average', 'score');
 
         let points = document.querySelector('#points');
         let average = document.querySelector('#average');
         let jumbotronfinish = document.querySelector('.jumbotron-finish');
         let jumbotronQuiz = document.querySelectorAll('.jumbotron-quiz');
 
-        points.innerHTML(score);
-        average.innerHTML(average);
+        //points.innerHTML(score);
+        //average.innerHTML(average);
         jumbotronfinish.classList.remove('jumbotron-visible');
-        jumbotronQuiz.class.add('jumbotron-visible');
+        //jumbotronQuiz.class.add('jumbotron-visible');
     } else {
 
         clearClass();
