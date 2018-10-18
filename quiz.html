@@ -43,23 +43,24 @@
     <div class="progress">
         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
     </div>
-    <div class="jumbotron jumbotron-quiz">
+    <div class="jumbotron jumbotron-start">
+        <h1 class="display-4 text-center">Quiz Game</h1>
+    </div>
+    <div class="jumbotron jumbotron-quiz jumbotron-visible">
         <div class="container">
             <h1 class="display-4">Quiz</h1>
-            <p class=questions id="question"></p>
-            <ul class="quizList">
-                <li id="one" class="answer" onclick="checkResult('one')"></li>
-                <li id="two" class="answer" onclick="checkResult('two')"></li>
-                <li id="three" class="answer" onclick="checkResult('three')"></li>
-                <li id="four" class="answer" onclick="checkResult('four')"></li>
-            </ul>
+            <p class=questions id="question">Pytanie</p>
+            <div class="alert alert-secondary answer" role="alert" id="answerA" onclick="checkResult('answerA')"></div>
+            <div class="alert alert-secondary answer" role="alert" id="answerB" onclick="checkResult('answerB')"></div>
+            <div class="alert alert-secondary answer" role="alert" id="answerC" onclick="checkResult('answerC')"></div>
+            <div class="alert alert-secondary answer" role="alert" id="answerD" onclick="checkResult('answerD')"></div>
         </div>
     </div>
     <div class="jumbotron jumbotron-finish jumbotron-visible">
-        <h1 class="display-4">Dziękuję za odpowiedzi!</h1>
-        <p> Ilość punktów : <span id="points"></span></p>
-        <p> Srednia punktów : <span id="average"></span></p>
+        <h1 class="display-4">Thanks for answers!</h1>
+        <h2> Points: <span id="points"></span> / 5</h2>
     </div>
+
 </main><!-- /.container -->
 
 <!-- Bootstrap core JavaScript
